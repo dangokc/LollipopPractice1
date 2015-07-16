@@ -4,14 +4,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class SubActivity extends ActionBarActivity {
+
+    private TextView tvUserName, tvDateTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
+
+        tvUserName = (TextView)findViewById(R.id.tvHelloUser);
+        tvDateTime = (TextView)findViewById(R.id.tvDateTime);
+
+        Bundle extras = getIntent().getExtras();
+        tvUserName.setText(extras.getString("USER_NAME"));
+        tvDateTime.setText(extras.getString("DATE_TIME"));
+
     }
 
     @Override

@@ -11,7 +11,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -51,6 +54,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public class MyBtnOnClickListener implements View.OnClickListener {
+        DateFormat df = new SimpleDateFormat("EEE, MMM d, ''yy");
+        String date = df.format(Calendar.getInstance().getTime());
+
         String username, pw;
         boolean found = false;
         @Override
@@ -74,7 +80,11 @@ public class MainActivity extends ActionBarActivity {
                         }
                     }
                     if(found == true){
-                        startActivity(subActivity);
+                        Bundle extras = new Bundle();
+                        extras.putString("USER_NAME", username);
+                        extras.putString("DATE_TIME", date);
+                        subActivity.putExtras(extras);
+                        startActivityForResult(subActivity, 1);
                     }
                     else
                         Toast.makeText(v.getContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
