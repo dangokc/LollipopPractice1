@@ -1,5 +1,6 @@
 package dangokc.com.llpractice;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +15,8 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private Intent subActivity;
 
     private EditText etUsername, etPassword;
     private Button btnOK, btnClear;
@@ -44,6 +47,7 @@ public class MainActivity extends ActionBarActivity {
         userArrayList.add(user2);
         userArrayList.add(user3);
 
+        subActivity = new Intent(this, SubActivity.class);
     }
 
     public class MyBtnOnClickListener implements View.OnClickListener {
@@ -70,8 +74,7 @@ public class MainActivity extends ActionBarActivity {
                         }
                     }
                     if(found == true){
-                        Toast.makeText(v.getContext(), username + "-"
-                                + pw, Toast.LENGTH_SHORT).show();
+                        startActivity(subActivity);
                     }
                     else
                         Toast.makeText(v.getContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();

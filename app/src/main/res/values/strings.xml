@@ -2,5 +2,11 @@
     <string name="app_name">LLPractice</string>
     <string name="btnOk">OK</string>
     <string name="btnClear">Clear</string>
+    <string name="btnBack">Back</string>
+
     <string name="action_settings">Settings</string>
+    <string name="title_activity_sub">Sub Activity</string>
+
+    <string name="radListView">ListView Demo</string>
+    <string name="radGridView">GridView Demo</string>
 </resources>
