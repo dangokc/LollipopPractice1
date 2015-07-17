@@ -25,32 +25,40 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@+id/tvHelloUser"
-        android:layout_margin="10dp"
+        android:layout_margin="0dp"
         android:background="@android:color/holo_orange_light">
 
-        <RadioButton
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radListView"
-            android:id="@+id/radListView"
-            android:layout_below="@+id/tvHelloUser"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:textColor="@android:color/holo_green_dark"
-            android:textSize="20dp"
-            android:layout_margin="10dp"/>
+            android:id="@+id/radGroup">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radListView"
+                android:id="@+id/radListView"
+                android:layout_below="@+id/tvHelloUser"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:checked="true"/>
 
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/radGridView"
-            android:id="@+id/radGridView"
-            android:layout_below="@+id/radListView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:textColor="@android:color/holo_green_dark"
-            android:textSize="20dp"
-            android:layout_margin="10dp"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radGridView"
+                android:id="@+id/radGridView"
+                android:layout_below="@+id/radListView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="20dp"
+                android:layout_margin="10dp"/>
+        </RadioGroup>
+
+
 
     </LinearLayout>
 
@@ -63,7 +71,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@android:color/holo_green_light"
-        android:layout_margin="5dp" />
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -73,7 +82,7 @@
         android:layout_below="@+id/lnLayoutRad"
         android:layout_toRightOf="@+id/btnOk"
         android:background="@android:color/holo_green_light"
-        android:layout_margin="5dp"/>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"

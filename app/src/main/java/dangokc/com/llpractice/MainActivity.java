@@ -90,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
                         Toast.makeText(v.getContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
             }
-            if(v.getId() == R.id.btnClear) {
+            else {
                 etUsername.setText("");
                 etPassword.setText("");
                 username = "";
