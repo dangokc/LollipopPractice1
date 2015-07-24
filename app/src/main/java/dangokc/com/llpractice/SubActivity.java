@@ -61,7 +61,7 @@ public class SubActivity extends ActionBarActivity {
                     Toast.makeText(v.getContext(), "OK - Grid View", Toast.LENGTH_SHORT).show();
             }
             else
-                Toast.makeText(v.getContext(), "BACK", Toast.LENGTH_SHORT).show();
+                finish();
         }
     }
 
